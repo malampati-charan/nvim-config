@@ -32,6 +32,11 @@ return {
 				capabilities = capabilities,
 			})
 
+			require("lspconfig").emmet_ls.setup({
+				capabilities = capabilities,
+				filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
+			})
+
 			lspconfig.harper_ls.setup({})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
